@@ -1,0 +1,56 @@
+﻿<Window x:Class="GameUIi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameUIi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Games">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Grid.Column="1" Name="DataGrid" ItemsSource="{Binding}" AutoGenerateColumns="True">
+
+                    </DataGrid>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Name of Game:"/>
+                        <TextBox Name="NameOfGameTextBox"/>
+                        <TextBlock Text="Producer"/>
+                        <TextBox Name="ProducerTextBox"/>
+                        <TextBlock Text="Ganre"/>
+                        <TextBox Name="GanreTextBox"/>
+                        <TextBlock Text="Date Of Realese:"/>
+                        <TextBox Name="RealesTextBox"/>
+                        <DatePicker Name="RealeseDatePicker"/>
+                        <TextBlock Text="Game Mode:"/>
+                        <TextBox Name="GameModeTextBox"/>
+                        <TextBlock Text="Sold copies:"/>
+                        <TextBox Name="SoldItemCountTextBox" PreviewTextInput="NumberValidationTextBox"/>
+                        <Button Name="SaveButton" Content="Save" Click="SaveButton_Click"/>
+                        <ComboBox Name="Answer2">
+                            <Button Name="q1Btn">Search for information on the name of the game</Button>
+                            <Button Name="q2Btn">Search for games by studio name</Button>
+                            <Button Name="q3Btn">Search for information on the name of the studio and game</Button>
+                            <Button Name="q4Btn">Search games by style</Button>
+                            <Button Name="q5Btn">Search games by release year</Button>
+                            <Button Name="q6Btn">Display information about all single-player games</Button>
+                            <Button Name="q7Btn">Display information about all multiplayer games</Button>
+                            <Button Name="q8Btn">Show the game with the maximum number of sold games</Button>
+                            <Button Name="q9Btn">Show the game with the minimum number of games sold</Button>
+                            <Button Name="q10Btn">Display the top 3 best selling games</Button>
+                            <Button Name="q11Btn">Display the top 3 best selling games</Button>
+                            <Button Name="q12Btn">Adding a new game. Before adding, you need check if such a game already exists</Button>
+                            <Button Name="q13Btn">Change the data of an existing game. User can change any game parameter</Button>
+                            <Button Name="q14Btn">Deleting a game. The game to be deleted is searched by game and studio name. Before deleting the game the application needs to ask the user whether to delete the game</Button>
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "GameDataContext": {
+      "commandName": "Executable"
+    }
+  }
+}
